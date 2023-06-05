@@ -19,9 +19,7 @@ async function activateXR() {
   document.body.appendChild(canvas);
   const gl = canvas.getContext("webgl", {xrCompatible: true});
 
-  // To be continued in upcoming steps.
-}
-const scene = new THREE.Scene();
+  const scene = new THREE.Scene();
 
 // The cube will have a different color on each side.
 const materials = [
@@ -90,12 +88,12 @@ const onXRFrame = (time, frame) => {
     renderer.render(scene, camera)
   }
 }
-<!-- Starting an immersive WebXR session requires user interaction.
-    We start this one with a simple button. -->
-<button onclick="activateXR()">Start Hello WebXR</button>
 session.requestAnimationFrame(onXRFrame);
-
-
+}
+// Starting an immersive WebXR session requires user interaction.
+    //We start this one with a simple button. -->
 </script>
+
+<button onclick="activateXR()">Start Hello WebXR</button>
 </body>
 </html>
