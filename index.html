@@ -69,7 +69,6 @@ const viewerSpace = await session.requestReferenceSpace('viewer');
 const hitTestSource = await session.requestHitTestSource({ space: viewerSpace });
 
 const loader = new THREE.GLTFLoader();
-const fbxloader = new THREE.FBXLoader();
 let reticle;
 loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/reticle.gltf", function(gltf) {
   reticle = gltf.scene;
