@@ -73,7 +73,7 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/re
   reticle.visible = false;
   scene.add(reticle);
 })
-
+/*
 let flower;
 loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function(gltf) {
   flower = gltf.scene;
@@ -82,6 +82,20 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/
 session.addEventListener("select", (event) => {
   if (flower) {
     const clone = flower.clone();
+    clone.position.copy(reticle.position);
+    scene.add(clone);
+  }
+});
+*/
+
+let squirrel;
+loader.load("https://https://ndean-planit.github.io/medhue_squirrel/scene.gltf", function(gltf) {
+  squirrel = gltf.scene;
+});
+
+session.addEventListener("select", (event) => {
+  if (squirrel) {
+    const clone = squirrel.clone();
     clone.position.copy(reticle.position);
     scene.add(clone);
   }
