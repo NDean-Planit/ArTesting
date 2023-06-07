@@ -94,11 +94,11 @@ session.addEventListener("select", (event) => {
   scene.add(cd);
   console.log("create cube")
 
-  geometry = new THREE.BoxGeometry(1, 3, 1);
-  m = new THREE.MeshBasicMaterial({ color: 0xbbbb03 });
-  cd = new THREE.Mesh(geometry, m)
-  cd.position.copy(reticle.position)
-  scene.add(cd);
+  const geometry2 = new THREE.BoxGeometry(1, 3, 1);
+  const m2 = new THREE.MeshBasicMaterial({ color: 0xbbbb03 });
+  const cd2 = new THREE.Mesh(geometry, m)
+  cd2.position.copy(reticle.position)
+  scene.add(cd2);
   console.log("create cube")
 });
 /*session.addEventListener("select", (event) => {
