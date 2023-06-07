@@ -87,9 +87,10 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/
 session.addEventListener("select", (event) => {
   // Create the cube and add it to the demo scene.
   const geometry = new THREE.BoxGeometry(1, 1, 1);
-  //geometry.position(reticle.position)
+  
   const m = new THREE.MeshStandardMaterial({ color: 0xb300b3 });
   var cd = new THREE.Mesh(geometry, m)
+  cd.position(reticle.position)
   scene.add(cube);
 });
 /*session.addEventListener("select", (event) => {
