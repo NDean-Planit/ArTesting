@@ -99,6 +99,7 @@ session.addEventListener("select", (event) => {
   cd = new THREE.Mesh(geometry, m)
   cd.position.copy(reticle.position)
   scene.add(cd);
+  console.log("create cube")
 });
 /*session.addEventListener("select", (event) => {
   if (flower) {
