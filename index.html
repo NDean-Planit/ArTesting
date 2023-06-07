@@ -81,13 +81,23 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/
   flower = gltf.scene;
 });
 
+
+
+
 session.addEventListener("select", (event) => {
+  // Create the cube and add it to the demo scene.
+  const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(5, 0.2, 0.2), materials);
+  cube.position.set(reticle.position);
+  scene.add(cube);
+});
+/*session.addEventListener("select", (event) => {
   if (flower) {
     const clone = flower.clone();
     clone.position.copy(reticle.position);
     scene.add(clone);
   }
 });
+*/
 
 /*
 let squirrel;
