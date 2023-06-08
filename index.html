@@ -107,7 +107,7 @@ session.addEventListener("select", (event) => {
 
   if (flower) {
     const clone = flower.clone();
-    clone.position.copy(reticle.position);
+    clone.position.copy(reticle.position.add(0,.2,0));
     scene.add(clone);
   }
   console.log("create squirrel")
