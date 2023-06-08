@@ -77,7 +77,8 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/re
 })
 
 let flower;
-loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function(gltf) {
+//loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function(gltf) {
+loader.load("https://ndean-planit.github.io/medhue_squirrel/Squirrel.gtlf", function(gltf) {
   flower = gltf.scene;
 });
 
@@ -103,6 +104,13 @@ session.addEventListener("select", (event) => {
   console.log(cd2.position)
   scene.add(cd2);
   console.log("create cube")
+
+  if (flower) {
+    const clone = flower.clone();
+    clone.position.copy(reticle.position);
+    scene.add(clone);
+  }
+  console.log("create squirrel")
 });
 /*session.addEventListener("select", (event) => {
   if (flower) {
