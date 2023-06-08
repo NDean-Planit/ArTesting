@@ -97,8 +97,8 @@ session.addEventListener("select", (event) => {
   const geometry2 = new THREE.BoxGeometry(.2, 3, .2);
   const m2 = new THREE.MeshBasicMaterial({ color: 0xbbbb03 });
   const cd2 = new THREE.Mesh(geometry2, m2)
-  cd2.position.copy(reticle.position)
-  console.log(cd2.position+(50,0,0))
+  cd2.position.copy(reticle.position+(5,0,0))
+  console.log(cd2.position)
   scene.add(cd2);
   console.log("create cube")
 });
