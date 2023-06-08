@@ -97,7 +97,7 @@ session.addEventListener("select", (event) => {
   const geometry2 = new THREE.BoxGeometry(.2, 1.5, .2);
   const m2 = new THREE.MeshBasicMaterial({ color: 0xbbbb03 });
   const cd2 = new THREE.Mesh(geometry2, m2)
-  offset=new THREE.Vector3( .5, -.75, 0 );
+  offset=new THREE.Vector3( .5, .75, 0 );
   offset.add(reticle.position)
   cd2.position.copy(offset)
   console.log(cd2.position)
