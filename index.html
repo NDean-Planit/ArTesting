@@ -91,7 +91,7 @@ const [squirrelData] = await Promise.all([
 
 session.addEventListener("select", (event) => {
   // Create the cube and add it to the demo scene.
-  const geometry = new THREE.BoxGeometry(1, .05, 5);
+  const geometry = new THREE.BoxGeometry(.75, .05, 5);
   
   const m = new THREE.MeshBasicMaterial({ color: 0x9b7653 });
   var cd = new THREE.Mesh(geometry, m)
@@ -109,19 +109,19 @@ session.addEventListener("select", (event) => {
   scene.add(cd2);
   console.log("create cube")
 
-  const geometry3 = new THREE.BoxGeometry(1, .05, 5);
+  const geometry3 = new THREE.BoxGeometry(.75, .05, 5);
   const m3 = new THREE.MeshBasicMaterial({ color: 0x7CFC00 });
   var cd3 = new THREE.Mesh(geometry3, m3)
-  offset=new THREE.Vector3( 1, 0, 0 );
+  offset=new THREE.Vector3( .75, 0, 0 );
   offset.add(reticle.position)
   cd3.position.copy(offset)
   scene.add(cd3);
   console.log("create cube")
 
-  const geometry4 = new THREE.BoxGeometry(1, .05, 5);
+  const geometry4 = new THREE.BoxGeometry(.75, .05, 5);
   const m4 = new THREE.MeshBasicMaterial({ color: 0x7CFC00 });
   var cd4 = new THREE.Mesh(geometry4, m4)
-  offset=new THREE.Vector3( -1, 0, 0 );
+  offset=new THREE.Vector3( -.75, 0, 0 );
   offset.add(reticle.position)
   cd4.position.copy(offset)
   scene.add(cd4);
