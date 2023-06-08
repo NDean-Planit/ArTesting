@@ -108,7 +108,7 @@ session.addEventListener("select", (event) => {
   console.log(cd2.position)
   scene.add(cd2);
   console.log("create cube")
-/*
+
   const geometry3 = new THREE.BoxGeometry(1, .05, 5);
   const m3 = new THREE.MeshBasicMaterial({ color: 0x7CFC00 });
   var cd3 = new THREE.Mesh(geometry3, m3)
@@ -126,7 +126,7 @@ session.addEventListener("select", (event) => {
   cd4.position.copy(offset)
   scene.add(cd4);
   console.log("create cube")
-*/
+
   if (flower) {
     const clone = flower.clone();
     clone.position.copy(reticle.position);
